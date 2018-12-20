@@ -14,6 +14,24 @@
 
   </div>
 
+
+  <script src="https://www.gstatic.com/firebasejs/5.7.0/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/5.7.0/firebase-firestore.js"></script>
+  <script>
+    // Initialize Firebase
+    var config = {
+      apiKey: "AIzaSyBdz0JxtT8squ_EU7zcDd_MV4ln53jDdhk",
+      authDomain: "d3-project-1-80992.firebaseapp.com",
+      databaseURL: "https://d3-project-1-80992.firebaseio.com",
+      projectId: "d3-project-1-80992",
+      storageBucket: "d3-project-1-80992.appspot.com",
+      messagingSenderId: "940901015439"
+    };
+    firebase.initializeApp(config);
+    const db = firebase.firestore();
+    db.settings({ timestampsInSnapshots: true });
+  </script>
+
   <script src="https://d3js.org/d3.v5.js"></script>
   <script src="index.js"></script>
 </body>

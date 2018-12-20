@@ -18,7 +18,14 @@ const xAxisGroup = graph.append("g")
 
 const yAxisGroup = graph.append("g");
 
-d3.json("menu.json").then(data => {
+db.collection("dishes").get().then(res => {
+
+  var data = [];
+  res.docs.forEach(doc => {
+    data.push(doc.data());
+  })
+
+  console.log(data)
 
   // find lowest value
   const min = d3.min(data, d => d.orders);
